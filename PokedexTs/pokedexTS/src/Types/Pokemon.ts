@@ -6,9 +6,17 @@ export interface Pokemon {
    order: number,
    weight: number,
    abilities: Ability,
+   sprites: Sprites
 }
 
 interface Ability {
     name: string
+}
+
+interface Sprites {
+  front_default: string | null
+  front_shiny: string | null
+  back_default: string | null
+  back_shiny: string | null
 }
 
