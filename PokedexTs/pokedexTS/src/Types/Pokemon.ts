@@ -6,7 +6,8 @@ export interface Pokemon {
    order: number,
    weight: number,
    abilities: Ability,
-   sprites: Sprites
+   sprites: Sprites,
+   types: Type[]
 }
 
 interface Ability {
@@ -20,3 +21,11 @@ interface Sprites {
   back_shiny: string | null
 }
 
+interface Type {
+    type: RawType
+}
+
+interface RawType {
+    name: string,
+    url: string
+}

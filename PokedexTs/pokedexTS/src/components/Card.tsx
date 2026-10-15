@@ -1,4 +1,5 @@
 import type { Pokemon } from '../Types/Pokemon'
+import "./card.css"
 
 export const Card = ({pokemon}: {pokemon: Pokemon}) => {
   return (
@@ -7,6 +8,7 @@ export const Card = ({pokemon}: {pokemon: Pokemon}) => {
           <img src={pokemon.sprites.front_default} alt={pokemon.name} />
         )}
         <h1>{pokemon.name}</h1>
+        <label>{pokemon.types[0].type.name}</label>
     </div>
   )
 }
