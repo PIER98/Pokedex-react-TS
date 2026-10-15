@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react'
 import { Header } from './components/Header'
 
 function App() {
-  const [count, setCount] = useState(0)
   const apiURL = import.meta.env.VITE_API_URL
-
 
   //Make the API CALL
  useEffect(() => {
