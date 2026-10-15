@@ -1,0 +1,26 @@
+.container {
+    background-color: red;
+    height: 200px;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    gap: 10px 
+   
+}
+
+.search-field {
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: black;
+    opacity: 0.8;
+    box-shadow: inset;
+}
+
+.search-button {
+    border-radius: 15px;
+}
