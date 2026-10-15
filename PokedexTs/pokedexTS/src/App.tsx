@@ -3,6 +3,7 @@ import { Header } from './components/Header'
 
 function App() {
   const apiURL = import.meta.env.VITE_API_URL
+  const [pokemonList, setPokemonList] = useState<Pokemon[]>([]);
 
   //Make the API CALL
  useEffect(() => {
@@ -13,7 +14,8 @@ function App() {
         throw new Error(`Response status ${response.status}`)
       }
       const result = await response.json()
-      console.log(result)
+      const data: [Pokemon] = result.results;
+      setPokemonList(data);
     } catch (error) {
       console.error(error)
     }
