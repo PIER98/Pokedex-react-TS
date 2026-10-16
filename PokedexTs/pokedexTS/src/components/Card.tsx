@@ -1,9 +1,21 @@
 import type { Pokemon } from '../Types/Pokemon'
+import  {PokemonTypeColor} from "../Types/PokemonTypeColor"
 import "./card.css"
 
+
 export const Card = ({pokemon}: {pokemon: Pokemon}) => {
+
+const mapBackgroundColor = (typeName: string): string => {
+  for (let i = 0; i < PokemonTypeColor.length; i++) {
+    if (PokemonTypeColor[i][0] === typeName) {
+      return PokemonTypeColor[i][1]
+    }
+  }
+  return '#A8A878'
+}
+
   return (
-    <div>
+    <div style={ {backgroundColor :mapBackgroundColor(pokemon.types[0].type.name)} }>
         {pokemon.sprites?.front_default && (
           <img src={pokemon.sprites.front_default} alt={pokemon.name} />
         )}
