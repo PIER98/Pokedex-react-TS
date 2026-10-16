@@ -3,4 +3,6 @@
     grid-template-columns: 200px 200px 200px;
     justify-content: center;
     margin: auto;
+    column-gap: 200px;
+    row-gap: 20px;
 }
