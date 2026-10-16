@@ -12,6 +12,10 @@ const mapBackgroundColor = (typeName: string): string => {
   return '#A8A878'
 }
 
+const mapTypes = (pokemon: Pokemon): string => {
+  return pokemon.types.map((t) => t.type.name).join('/')
+}
+
   return (
     <div className='card' style={ {backgroundColor :mapBackgroundColor(pokemon.types[0].type.name)} }>
       <div className='card-box'>
@@ -19,7 +23,7 @@ const mapBackgroundColor = (typeName: string): string => {
           <img src={pokemon.sprites.front_default} alt={pokemon.name} />
         )}
         <h1>{pokemon.name}</h1>
-        <label>{pokemon.types[0].type.name}</label>
+        <label>{mapTypes(pokemon)}</label>
       </div>
     </div>
   )
